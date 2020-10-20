@@ -5,4 +5,3 @@ authors = ["Piotr Roslaniec <p.roslaniec@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-hyper = "0.12"

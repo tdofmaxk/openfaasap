@@ -1,7 +1,7 @@
-use hyper::{Body, Request, Response};
+type Error = Box<dyn std::error::Error>;
 
 const PHRASE: &str = "Hello, World!";
 
-pub fn handle(_req: Request<Body>) -> Response<Body> {
-    Response::new(Body::from(PHRASE))
+pub fn handle(_body: Vec<u8>) -> Result<Vec<u8>, Error> {
+    Ok(PHRASE.as_bytes().to_vec())
 }
